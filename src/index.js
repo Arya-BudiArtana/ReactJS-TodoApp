@@ -10,11 +10,13 @@ import '@fontsource/poppins/700.css';
 import './styles/GlobalStyles.css';
 import { store } from './app/store';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
